@@ -8,4 +8,5 @@ If overlays are available use the toggle buttons to turn them on and off
   1. Connect to the WWU VPN
   2. Install dependencies: `npm install`
   3. Start server with `node server.js`
-  4. Go to localhost:3000/ 
+  4. Go to localhost:3000/
+  5. Open `http://giv-sitcomdev.uni-muenster.de:5000/remote/` in a different tab
