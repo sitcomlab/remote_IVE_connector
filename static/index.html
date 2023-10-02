@@ -3,104 +3,38 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>IVE remote control</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 20px;
-        }
-
-        h1 {
-            margin-bottom: 20px;
-        }
-
-        .connectButton {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #2196F3;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-
-        .colorful-buttons {
-            display: flex;
-            justify-content: center;
-            margin-top: 30px;
-        }
-
-        .colorful-button {
-            margin: 5px;
-            padding: 15px 30px;
-            font-size: 18px;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            width: 150px;
-        }
-
-        .button-red {
-            background-color: #FF5733;
-        }
-
-        .switch {
-            position: relative;
-            display: inline-block;
-            width: 60px;
-            height: 34px;
-        }
-
-        .switch input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
-
-        .slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #ccc;
-            transition: 0.4s;
-            border-radius: 34px;
-        }
-
-        .slider:before {
-            position: absolute;
-            content: "";
-            height: 26px;
-            width: 26px;
-            left: 4px;
-            bottom: 4px;
-            background-color: white;
-            transition: 0.4s;
-            border-radius: 50%;
-        }
-
-        input:checked+.slider {
-            background-color: #2196F3;
-        }
-
-        input:checked+.slider:before {
-            transform: translateX(26px);
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simport privacy demo</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <h1>Independent Remote control</h1>
-    <button id="connectButton" class="connectButton">Connect</button>
-    <button id="statebutton" class="connectButton">Get State</button>
-    <div id="colorful-buttons">
-        <button id="randomize" class="colorful-button button-red">RANDOMIZE</button>
+    <header>
+        <h1>Privacy visualization</h1>
+    </header>
+
+    <div class="dropdown-container">
+        <label for="Videos">Videos:</label>
+        <select id="Videos">
+            <option id="42">Frauenstraße</option>
+            <option id="2">Hauptbahnhof</option>
+        </select>
     </div>
-    <div id="overlay-buttons">
+
+    <div class="dropdown-container">
+        <label for="Privacy">Privacy:</label>
+        <select id="Privacy">
+            <option value="low">low</option>
+            <option value="medium">medium</option>
+            <option value="high">high</option>
+        </select>
+    </div>
+
+    <div class="submit-container">
+        <button type="submit" onclick="submit()">Submit</button>
+    </div>
+    <div class="submit-container">
+        <button type="submit" onclick="deleteOverlays()">Delete overlays</button>
     </div>
     <script src="./index.js"></script>
 </body>
